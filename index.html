@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Orchard Fresh - India's Finest Apples Direct from Orchards</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Premium Orchard Fresh</h2>
+                <span>From Orchard to Table in 48 Hours</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#shop" class="nav-link">Shop</a></li>
+                <li><a href="#orchards" class="nav-link">Our Orchards</a></li>
+                <li><a href="#quality" class="nav-link">Quality Promise</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>India's Freshest Premium Apples</h1>
+            <p>Handpicked from Kashmir & Himachal orchards, delivered to your doorstep within 48 hours</p>
+            <div class="hero-features">
+                <div class="feature">
+                    <i class="fas fa-leaf"></i>
+                    <span>Farm Fresh</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-truck"></i>
+                    <span>48hr Delivery</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-award"></i>
+                    <span>Premium Quality</span>
+                </div>
+            </div>
+            <button class="cta-button" onclick="scrollToSection('shop')">Shop Premium Apples</button>
+        </div>
+        <div class="hero-image">
+            <div class="apple-showcase"></div>
+        </div>
+    </section>
+
+    <!-- Product Collections -->
+    <section id="shop" class="collections">
+        <div class="container">
+            <h2>Premium Collections</h2>
+            <div class="collection-grid">
+                <div class="collection-card ultra-premium">
+                    <div class="collection-image"></div>
+                    <h3>Ultra Premium</h3>
+                    <p>Honeycrisp, Envy, Jazz varieties</p>
+                    <span class="price">₹400-600/kg</span>
+                    <button class="collection-btn" onclick="showProducts('ultra-premium')">Explore Collection</button>
+                </div>
+                <div class="collection-card premium-domestic">
+                    <div class="collection-image"></div>
+                    <h3>Premium Domestic</h3>
+                    <p>Kashmir Red Delicious, Himachal Gala</p>
+                    <span class="price">₹250-350/kg</span>
+                    <button class="collection-btn" onclick="showProducts('premium-domestic')">Explore Collection</button>
+                </div>
+                <div class="collection-card organic-luxury">
+                    <div class="collection-image"></div>
+                    <h3>Organic Luxury</h3>
+                    <p>Certified organic premium varieties</p>
+                    <span class="price">₹350-450/kg</span>
+                    <button class="collection-btn" onclick="showProducts('organic-luxury')">Explore Collection</button>
+                </div>
+                <div class="collection-card seasonal">
+                    <div class="collection-image"></div>
+                    <h3>Seasonal Exclusives</h3>
+                    <p>Limited harvest specialties</p>
+                    <span class="price">₹500-800/kg</span>
+                    <button class="collection-btn" onclick="showProducts('seasonal')">Explore Collection</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="productContainer"></div>
+        </div>
+    </div>
+
+    <!-- Orchard Story -->
+    <section id="orchards" class="orchards">
+        <div class="container">
+            <div class="orchard-content">
+                <div class="orchard-text">
+                    <h2>Our Partner Orchards</h2>
+                    <p>We partner exclusively with premium orchards in Jammu & Kashmir and Himachal Pradesh, ensuring every apple meets our exacting standards.</p>
+                    <div class="orchard-features">
+                        <div class="orchard-feature">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Kashmir Valley</h4>
+                                <p>Premium Ambri & Red Delicious varieties from 6,000ft elevation</p>
+                            </div>
+                        </div>
+                        <div class="orchard-feature">
+                            <i class="fas fa-mountain"></i>
+                            <div>
+                                <h4>Himachal Pradesh</h4>
+                                <p>Gala & Rich-A-Red from sustainable hill orchards</p>
+                            </div>
+                        </div>
+                        <div class="orchard-feature">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <h4>Certified Organic</h4>
+                                <p>Chemical-free cultivation with natural farming methods</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="orchard-image">
+                    <div class="orchard-showcase"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Promise -->
+    <section id="quality" class="quality">
+        <div class="container">
+            <h2>Our Quality Promise</h2>
+            <div class="quality-grid">
+                <div class="quality-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>48-Hour Freshness</h3>
+                    <p>From orchard harvest to your doorstep in maximum 48 hours</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fas fa-thermometer-half"></i>
+                    <h3>Cold Chain Integrity</h3>
+                    <p>Temperature-controlled storage and transport throughout</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Hand-Selected Quality</h3>
+                    <p>Each apple individually inspected for size, color, and quality</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fas fa-qrcode"></i>
+                    <h3>Complete Traceability</h3>
+                    <p>QR code tracking from specific orchard to your table</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Plans -->
+    <section class="subscription">
+        <div class="container">
+            <h2>Premium Subscription Plans</h2>
+            <div class="subscription-grid">
+                <div class="subscription-card">
+                    <h3>Fresh Weekly</h3>
+                    <div class="subscription-price">₹1,200<span>/week</span></div>
+                    <ul>
+                        <li>2kg premium apples weekly</li>
+                        <li>Variety rotation</li>
+                        <li>Free delivery</li>
+                        <li>10% discount</li>
+                    </ul>
+                    <button class="subscription-btn">Subscribe Now</button>
+                </div>
+                <div class="subscription-card featured">
+                    <span class="badge">Most Popular</span>
+                    <h3>Luxury Monthly</h3>
+                    <div class="subscription-price">₹4,800<span>/month</span></div>
+                    <ul>
+                        <li>8kg premium apples monthly</li>
+                        <li>Ultra premium varieties included</li>
+                        <li>Priority delivery</li>
+                        <li>15% discount</li>
+                        <li>Exclusive seasonal varieties</li>
+                    </ul>
+                    <button class="subscription-btn">Subscribe Now</button>
+                </div>
+                <div class="subscription-card">
+                    <h3>Corporate Gifting</h3>
+                    <div class="subscription-price">Custom<span>/order</span></div>
+                    <ul>
+                        <li>Luxury gift packaging</li>
+                        <li>Custom branding available</li>
+                        <li>Bulk order discounts</li>
+                        <li>White-glove delivery</li>
+                    </ul>
+                    <button class="subscription-btn">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>orders@premiumorchardfresh.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Service Hours</h4>
+                            <p>7 AM - 10 PM, All Days</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <select>
+                            <option>General Inquiry</option>
+                            <option>Bulk Orders</option>
+                            <option>Corporate Gifting</option>
+                            <option>Quality Concern</option>
+                        </select>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Premium Orchard Fresh</h3>
+                    <p>India's finest apples delivered fresh from orchards to your doorstep within 48 hours.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#orchards">Our Orchards</a></li>
+                        <li><a href="#quality">Quality Promise</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Subscription</h4>
+                    <p>Subscribe to get the freshest apples delivered regularly</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Premium Orchard Fresh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
